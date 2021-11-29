@@ -14,6 +14,7 @@
 #define headersU
 #include "competition.h"
 #include "subsystems.h"
+#include "autonomous.h"
 #endif
 
 #define waitUntil(condition)                                                   \

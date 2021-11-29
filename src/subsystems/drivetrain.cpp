@@ -1,6 +1,6 @@
 #include "vex.h"
 
-double reversed = false;
+bool reversed = false;
 
 void forwardDrive() {
   DriveLB.spin(forward, (Controller.Axis3.position(percent)/8.34) + (Controller.Axis1.position(percent)/8.34), voltageUnits::volt);
@@ -27,14 +27,8 @@ void switchForward() {
 void driveTrainController() {
   if(reversed) {
     backwardDrive();
-    Controller.Screen.clearLine(0);
-    Controller.Screen.setCursor(0, 0);
-    Controller.Screen.print("Reversed: Yes");
   } else {
     forwardDrive();
-    Controller.Screen.clearLine(0);
-    Controller.Screen.setCursor(0, 0);
-    Controller.Screen.print("Reversed: No");
   }
 
   Controller.ButtonUp.pressed(switchForward);

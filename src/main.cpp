@@ -20,6 +20,9 @@ int main() {
   // Initializing Robot Configuration. DO NOT REMOVE!
   vexcodeInit();
 
+  preAuton();
+
+  task taskId1(liftControllerTask);
   Competition.autonomous(autonomous);
   Competition.drivercontrol(usercontrol);
   

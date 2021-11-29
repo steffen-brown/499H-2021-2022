@@ -10,13 +10,17 @@ extern motor DriveRF;
 extern motor LiftL;
 extern motor LiftR;
 
-extern motor Elevator;
+extern motor Latch;
+
+extern motor Grabber;
 
 extern controller Controller;
+extern controller ControllerSecondary;
 
 extern encoder EncoderR;
 extern encoder EncoderL;
-extern encoder EncoderC;
+
+extern inertial Inertial;
 
 void vexcodeInit(void);
 
